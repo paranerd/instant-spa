@@ -5,7 +5,7 @@ const path = require('path');
 
 class ConfigHelper {
     constructor() {
-        this.location = path.join(__dirname, "config", "config.json");
+        this.location = path.join(__dirname, "../", "config", "config.json");
         this.config = this.load();
     }
 
