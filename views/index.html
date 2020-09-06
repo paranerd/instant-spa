@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instant Spa</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
+	<!-- Custom -->
+	<link rel="stylesheet" href="css/design.css">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="background" style="display: block;"></div>
+
+	<div style="position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center; text-align: center;">
+		<img src="img/logo.png" height="48" width="48">
+		<h1 style="margin-top: 10px; color: #d77e00; font-family: 'Lora', serif;">Instant Spa</h1>
+		<!--<h2 style="font-size: 1rem; color: #999;">Vitalisierend &bull; Erholend &bull; Entspannend</h2>-->
+		<h2 id="remaining-minutes" style="font-size: 6rem; color: #fff;">0</h2>
+		<h5 style="color: #fff;">Minuten verbleiben</h5>
+		<div class="row" style="margin-top: 40px;">
+			<button class="btn btn-lg btn-info" data-toggle="modal" data-target="#use-modal">Buchen</button>
+			<button class="btn btn-lg btn-outline-info" data-toggle="modal" data-target="#voucher-modal" style="margin-left: 40px;">Aufladen</button>
+		</div>
+	</div>
+
+	<!-- Use Modal -->
+	<div id="use-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<form id="use" action="#">
+					<div class="modal-header">
+						<h5 class="modal-title">Buchen</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<input id="minutes" style="text-align: center;" class="form-control" name="minutes" type="number" min="0" step="1" placeholder="Wieviele Minuten?" required />
+						</div>
+
+						<div id="use-alert" class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="display: none;">
+							<strong>Fehler!</strong> <span id="use-error">Error</span>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info" data-dismiss="modal">Abbrechen</button>
+						<button type="submit" class="btn btn-info">Buchen</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Voucher Modal -->
+	<div id="voucher-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<form id="voucher" action="#">
+					<div class="modal-header">
+						<h5 class="modal-title">Aufladen</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							 <input id="code" style="text-align: center;" class="form-control" name="code" type="text" placeholder="Code" required />
+						</div>
+
+						<div id="voucher-alert" class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="display: none;">
+							<strong>Fehler!</strong> <span id="voucher-error">Error</span>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info" data-dismiss="modal">Abbrechen</button>
+						<button type="submit" class="btn btn-info">Aufladen</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- Popper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Custom -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

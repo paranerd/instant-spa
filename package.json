@@ -1,0 +1,16 @@
+{
+  "name": "instantspa",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon -e html,css,js server.js",
+    "start": "pm2 start server.js --name instantspa"
+  },
+  "author": "paranerd",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1"
+  }
+}

@@ -1,0 +1,32 @@
+@font-face {
+	font-family: RobotoSlab;
+	src: url('../font/RobotoSlab.ttf');
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+nav {
+	background: rgba(0,0,0,0);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text,
+.navbar-custom .nav-link {
+	color: #aaa !important;
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/*background: url('../img/background5.jpg') no-repeat center fixed;
+	background-size: cover;*/
+	background: #37474e;
+	z-index: -1;
+}
